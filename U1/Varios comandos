@@ -1,0 +1,43 @@
+-- Abrindo uma linha de comentario
+/* comentario databasea
+Abrindo
+Varias 
+linhas de texto
+*/
+
+-- Criando uma tabela
+ create table minha_tabela(
+  minha_coluna varchar(10)
+ );
+ 
+ -- Adicionando outra coluna na minha tabela
+ alter table minha_tabela
+ add outra_coluna varchar(10);
+ 
+ -- Alterando o  nome de uma coluna 
+ alter table minha_tabela
+ rename column outra_coluna to uma_outra_coluna;
+ 
+ -- Alterando tipo de dados de uma coluna
+  alter table minha_tabela
+  modify uma_outra_coluna int;
+  
+  -- Apagando uma coluna de uma tabela
+  alter table minha_tabela
+  drop uma_outra_coluna;
+  
+-- Criando outra tabela
+create table tipos_dados(
+  num_inteiro int(3),
+  num_decimal decimal(3,2),
+  texto_variavel varchar(15),
+  boolean tinyint(1)
+);
+ 
+
+-- Descrevendo uma tabela
+-- varchar é um texto com caracteris variaveis
+-- varchar de 5 = 12345 ou abcde
+-- text aceita 67K de posições
+-- recomendação para caracteres de nome 250, utilizado com 100
+ describe tipos_dados;
